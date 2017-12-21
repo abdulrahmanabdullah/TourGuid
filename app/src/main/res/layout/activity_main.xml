@@ -6,10 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="abdulrahmanjavanrd.com.tourguid.MainActivity">
+    tools:context="abdulrahmanjavanrd.com.tourguid.app.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:elevation="4dp"
+        android:theme="@style/toolBarTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.v7.widget.Toolbar
@@ -23,19 +24,19 @@
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TabItem
-                android:text="first"
+                android:text="@string/hotels_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <android.support.design.widget.TabItem
-                android:text="second"
+                android:text="@string/beach_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <android.support.design.widget.TabItem
-                android:text="Third"
+                android:text="@string/mall_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <android.support.design.widget.TabItem
-                android:text="Third"
+                android:text="@string/foods_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </android.support.design.widget.TabLayout>

@@ -1,3 +1,169 @@
 <resources>
     <string name="app_name">TourGuid</string>
+    <string name="hotels_tab">Hotel</string>
+    <string name="beach_tab">Beach</string>
+    <string name="mall_tab">Mall</string>
+    <string name="foods_tab">Foods</string>
+    <string-array name="mallTitle">
+        <item>Al-Arabia Mall</item>
+        <item>Al Yasmin Mall</item>
+        <item>Al Andalus Mall</item>
+        <item> Aziaz Mall </item>
+        <item> Boulevard Mall</item>
+        <item> Tahlia shopping center </item>
+        <item> Red Sea Mall</item>
+        <item>Rushan Mall</item>
+        <item>Salaam Mall </item>
+        <item>Stars Avenue </item>
+    </string-array>
+    <string-array name="mallDescription">
+        <!--Description alarabia mall -->
+        <item> The Mall of Arabia is a Shopping Mall,Area of This mall is 261K square meter,It also contains Kidzania Jeddah </item>
+        <!-- Desc al yesmin mall -->
+        <item>This newest and biggest mall in jeddah,And it's contain popular company,also it's contain BillyBeez</item>
+        <!-- Desc Al Andlus Mall-->
+        <item>Area of this Mall is 160K square meter,also visited in year 11 M . </item>
+        <!-- Desc Aziaz Mall-->
+        <item>If you looking for entertainments after shopping,This mall best choice for you. </item>
+        <!-- Desc Boulevard mall -->
+        <item>Luxury And Fashion Mall </item>
+        <!-- Desc Tahlia  -->
+        <item>
+            A popular mall and best mall in jeddah
+        </item>
+        <!-- Desc Red sea Mall  -->
+        <item>
+            If you looking for entertainments after shopping,This mall best choice for you.
+        </item>
+        <!--Desc Rushan Mall -->
+        <item> If you interesting of a normal mall,This mall for you  </item>
+        <!-- Desc Slaam Mall -->
+        <item> If you want to be near all malls, And center in the city, you should visit This. </item>
+        <!-- Stars Avenue -->
+        <item>  Ice skating Rink And Shopping</item>
+    </string-array>
+    <string-array name="foodTitle">
+        <item>CheeseCake Factory</item>
+        <item>IHope </item>
+        <item>Payaya Cafe And Restaurant</item>
+        <item>Blue Ocean</item>
+        <item>Shack Shack</item>
+        <item>Texas RoadHouse</item>
+        <item>Al Baik</item>
+        <item>Al Tasij</item>
+        <item>Abu Zaid</item>
+    </string-array>
+    <string-array name="foodDescription">
+        <!--CheeseCake -->
+        <item>Cafe And Restaurant</item>
+        <!-- IHope -->
+        <item>FastFood</item>
+        <!-- Payaya -->
+        <item>Cafe And Restaurant</item>
+        <!--Blue ocean-->
+        <item>Cafe And Restaurant</item>
+        <!--Shack shack-->
+        <item>Hamburger Restaurant</item>
+        <!--Texas -->
+        <item>FastFood</item>
+        <!--AL Baik-->
+        <item>FastFood</item>
+        <item>FastFood</item>
+        <!--Abu Zaid -->
+        <item> Popular foods </item>
+    </string-array>
+    <string-array name="beachTitle">
+        <item>Al Saif Beach</item>
+        <item>Jeddah Fountain</item>
+        <item>Jeddah WaterFront</item>
+        <item>King Fahd Beach</item>
+        <item>Thuawal Beach</item>
+    </string-array>
+    <string-array name="beachDescription">
+        <!-- Al Safi Beach -->
+        <item>Location : south city , out city
+            Total Area : 260K square meter
+            Far of downtown 20 minutes
+        </item>
+        <!--Jaddah Fountain-->
+        <item>Location : Downtown
+            Year : 1985, 32 year ago
+            Height : 312 meters
+        </item>
+        <!--Jaddah WaterFront-->
+        <item>
+            Location : North of city
+            Year : 2017
+            Total Area : 4 kilo meters
+        </item>
+        <!--North Beach-->
+        <item>
+            Location : DownTown, near of King Fahd Fountain
+            Year : 1985
+        </item>
+        <!--Thuawal Beach-->
+        <item>
+            Location : out of city , Far of downTown 80 kilo meters
+            Total Area : 4 kilo meters.
+        </item>
+    </string-array>
+    <string-array name="hotelTitle">
+        <item>RoseWood</item>
+        <item>Hilton</item>
+        <item>Sofitel</item>
+        <item>Redisson Blue</item>
+        <item>Ritz Carlton</item>
+        <item>Waldrof Astoria Jeddah  </item>
+        <item>Al Rawasi Hotel</item>
+        <item>Park Hyatt </item>
+        <item>Sheraton Jeddah Hotel</item>
+    </string-array>
+    <string-array name="hotelDescription">
+        <!-- RoseWood -->
+        <item>
+            View : panoramic Red Sea Views
+           Booking Rate : 8.6
+        </item>
+        <!-- Hilton -->
+        <item>
+            View : City views, Res Sea Views
+            Booking Rate :7.7
+        </item>
+        <!--Softie-->
+        <item>
+            View : Corniche Views , Red Sea Views
+            Booking Rate : 8.2
+        </item>
+        <!--Radisson Blue -->
+        <item>
+            View : City views
+            Booking Rate : 7.6
+        </item>
+        <!-- Ritz carlton-->
+        <item>
+            View :Full Red Sea Views
+            Booking  Rate : 9.2
+        </item>
+
+        <!--Waldrof Hotel-->
+        <item>
+            View : Red Sea Views
+            Booking Rate : 9
+        </item>
+        <!--Al Rawasi -->
+        <item>
+           View : City Views
+            Booking Rate : 8.1
+        </item>
+        <!--Park Hyatt-->
+        <item>
+            View : Red Sea Views
+            Booking rate : 7.8
+        </item>
+        <!--Sheraton hotel-->
+        <item>
+            View : half Red Sea views
+            Booking Rate : 6.8
+        </item>
+    </string-array>
 </resources>
