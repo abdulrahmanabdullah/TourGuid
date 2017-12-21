@@ -4,6 +4,8 @@
     <string name="beach_tab">Beach</string>
     <string name="mall_tab">Mall</string>
     <string name="foods_tab">Foods</string>
+    <string name="card_title">Title</string>
+    <string name="card_description">Description</string>
     <string-array name="mallTitle">
         <item>Al-Arabia Mall</item>
         <item>Al Yasmin Mall</item>

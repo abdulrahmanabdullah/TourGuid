@@ -1,9 +1,13 @@
 package abdulrahmanjavanrd.com.tourguid.adapter;
 
 import android.content.Context;
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -66,6 +70,13 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        View v = LayoutInflater.from(context).inflate(R.layout.list_item,parent,false);
+        ImageView imgView = v.findViewById(R.id.imgView);
+        TextView txvTitle = v.findViewById(R.id.txvTitle);
+        TextView txvDesc = v.findViewById(R.id.txvDesc);
+        imgView.setImageResource(getItem(position).getImage());
+        txvTitle.setText(titlesCard[position]);
+        txvDesc.setText(descriptionCard[position]);
+        return v;
     }
 }

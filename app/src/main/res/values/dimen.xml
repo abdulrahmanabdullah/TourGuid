@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<dimen name="textDimen">20dp</dimen>
+<dimen name="cardMarginTop">5dp</dimen>
+    <dimen name="imgMargin">7dp</dimen>
+    <dimen name="imgWidth">60dp</dimen>
+    <dimen name="imgHeight">60dp</dimen>
 </resources>
