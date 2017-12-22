@@ -44,8 +44,11 @@ public class Beach implements BaseData<Beach> {
      */
     private int[] allImages(){
         int[] images = {
-                R.drawable.al_saif_beach_png,R.drawable.jeddah_fountain_png,R.drawable.jeddah_north_beach_png,
-                R.drawable.jeddah_waterfront_png,R.drawable.thuwal_jeddah_beach_png
+                R.drawable.al_saif_beach_png,
+                R.drawable.jeddah_fountain_png,
+                R.drawable.jeddah_waterfront_png,
+                R.drawable.jeddah_north_beach_png,
+                R.drawable.thuwal_jeddah_beach_png
         };
         return images ;
     }

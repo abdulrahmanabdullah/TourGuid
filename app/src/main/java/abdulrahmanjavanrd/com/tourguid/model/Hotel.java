@@ -46,9 +46,14 @@ public class Hotel implements BaseData<Hotel> {
      */
     private int[] allImages() {
         int[] images = {
-                R.drawable.al_roicea_png, R.drawable.hilton_png, R.drawable.intercontiental,
-                R.drawable.jeddah_park_png, R.drawable.redisson_blue_png, R.drawable.ritz_carlton_png,
-                R.drawable.rosewood_png, R.drawable.softie_png, R.drawable.waldrof_png
+                R.drawable.rosewood_png,R.drawable.hilton_png,
+                R.drawable.softie_png,
+                R.drawable.redisson_blue_png,
+                R.drawable.ritz_carlton_png,
+                R.drawable.waldrof_png,
+                R.drawable.al_roicea_png,
+                R.drawable.jeddah_park_png ,
+                R.drawable.intercontiental
         };
         return images;
     }
