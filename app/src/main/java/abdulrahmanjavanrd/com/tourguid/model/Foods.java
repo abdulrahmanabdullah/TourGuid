@@ -51,7 +51,8 @@ public class Foods implements BaseData<Foods> {
     private int[] allImages() {
 
         int[] images = {
-                R.drawable.abu_zaid_png, R.drawable.al_baik_png, R.drawable.al_taisj_png, R.drawable.blue_ocean_png, R.drawable.cheesecake_factory, R.drawable.ihop_png, R.drawable.payaya_cafe_restaurant_png, R.drawable.shacke_shack_png, R.drawable.texas_roadhouse_png
+                R.drawable.ihop_png,R.drawable.cheesecake_factory,R.drawable.payaya_cafe_restaurant_png,R.drawable.blue_ocean_png,R.drawable.shacke_shack_png,R.drawable.texas_roadhouse_png,R.drawable.al_baik_png,R.drawable.al_taisj_png,
+                R.drawable.abu_zaid_png
         };
         return images;
     }
