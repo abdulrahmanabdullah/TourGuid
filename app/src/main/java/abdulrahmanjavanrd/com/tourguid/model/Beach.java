@@ -12,7 +12,7 @@ import abdulrahmanjavanrd.com.tourguid.R;
 
 public class Beach implements BaseData<Beach> {
     private int image ;
-
+    private String uriData ;
     /**
      * @param image to set image in current object .
      */
@@ -20,6 +20,22 @@ public class Beach implements BaseData<Beach> {
         this.image = image;
     }
 
+
+    public void setUriData(String uriData) {
+        this.uriData = uriData;
+    }
+
+
+    private List<String> fillUriData(){
+        List<String> list = new ArrayList<>() ;
+        list.add("www.beach-1.com");
+        list.add("www.beach-2.com");
+        list.add("www.beach-3.com");
+        list.add("www.beach-4.com");
+        list.add("www.beach-5.com");
+        list.add("www.beach-6.com");
+        return list ;
+    }
     /**
      * This Method i call for pass adapter
      * @return ArrayList contain object of {@link Hotel}
@@ -28,10 +44,12 @@ public class Beach implements BaseData<Beach> {
     public List<Beach> getAllData() {
         List<Beach> mList = new ArrayList<>();
         int[] images = allImages();
+        List<String> list = fillUriData();
         try{
             for ( int i = 0 ; i < images.length ; i++){
                 Beach beach = new Beach();
                 beach.setImage(images[i]);
+                beach.setUriData(list.get(i));
                 mList.add(beach);
             }
         }catch (ArrayIndexOutOfBoundsException e ){
@@ -39,6 +57,12 @@ public class Beach implements BaseData<Beach> {
         }
         return mList;
     }
+
+    @Override
+    public String getUrlData() {
+        return this.uriData;
+    }
+
     /**
      * @return All restaurant images in drawable folder  .
      */

@@ -13,12 +13,17 @@ import abdulrahmanjavanrd.com.tourguid.R;
 public class Hotel implements BaseData<Hotel> {
 
     private int image ;
+    private String uriData ;
 
     /**
      * @param image to set image in current object .
      */
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public void setUriData(String uriData) {
+        this.uriData = uriData;
     }
 
     /**
@@ -29,10 +34,12 @@ public class Hotel implements BaseData<Hotel> {
     public List<Hotel> getAllData() {
         List<Hotel> mList = new ArrayList<>();
         int[] images = allImages();
+        List<String> list = fillUriData();
         try{
            for ( int i = 0 ; i < images.length ; i++){
                Hotel hotel = new Hotel();
                hotel.setImage(images[i]);
+               hotel.setUriData(list.get(i));
                mList.add(hotel);
            }
         }catch (ArrayIndexOutOfBoundsException e ){
@@ -40,6 +47,27 @@ public class Hotel implements BaseData<Hotel> {
         }
         return mList;
     }
+
+
+    private List<String> fillUriData(){
+        List<String> list = new ArrayList<>() ;
+        list.add("www.hotel-1.com");
+        list.add("www.hotel-2.com");
+        list.add("www.hotel-3.com");
+        list.add("www.hotel-4.com");
+        list.add("www.hotel-5.com");
+        list.add("www.hotel-6.com");
+        list.add("www.hotel-6.com");
+        list.add("www.hotel-6.com");
+        list.add("www.hotel-6.com");
+        list.add("www.hotel-10.com");
+        return list ;
+    }
+    @Override
+    public String getUrlData() {
+        return this.uriData;
+    }
+
     /**
      * @return All Hotel images in drawable folder  .
      * Total image = 9
@@ -61,6 +89,7 @@ public class Hotel implements BaseData<Hotel> {
     public int getImage() {
         return image;
     }
+
     @Override
     public int hashCode() {
         return 0;
