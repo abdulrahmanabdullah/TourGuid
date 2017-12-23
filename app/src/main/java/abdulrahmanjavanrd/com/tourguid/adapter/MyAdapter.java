@@ -17,7 +17,7 @@ import abdulrahmanjavanrd.com.tourguid.Interface.BaseData;
 import abdulrahmanjavanrd.com.tourguid.R;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ * @author Abdulrahman.A on 21/12/2017.
  */
 
 public class MyAdapter extends BaseAdapter {

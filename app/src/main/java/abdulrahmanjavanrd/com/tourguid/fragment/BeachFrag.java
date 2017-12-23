@@ -15,7 +15,7 @@ import abdulrahmanjavanrd.com.tourguid.adapter.MyAdapter;
 import abdulrahmanjavanrd.com.tourguid.factory.DataFactory;
 
 /**
- * @author  Abdulrahman.A
+ * @author Abdulrahman.A
  * @sinc 21/12/2017.
  */
 
@@ -23,17 +23,19 @@ public class BeachFrag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.beach_layout,container,false);
-        addListView(container.getContext(),v);
+        View v = inflater.inflate(R.layout.beach_layout, container, false);
+        addListView(container.getContext(), v);
         return v;
     }
-    public void addListView(Context context , View v){
-        /** First get Beach class from {@link DataFactory} And get getAllData method
+
+    public void addListView(Context context, View v) {
+        /** Get Beach class Who? Create new obj of {@link DataFactory} Then pass the class name into getDataType method
+         * This method return new object of {@link BaseData},just that .
          *  then send  arrayList to  {@link MyAdapter} */
         DataFactory factory = new DataFactory();
         BaseData beachData = factory.getDataType("beach");
         ListView listView = v.findViewById(R.id.list_item);
-        MyAdapter adapter = new MyAdapter(context,beachData.getAllData(),beachData);
+        MyAdapter adapter = new MyAdapter(context, beachData.getAllData(), beachData);
         listView.setAdapter(adapter);
     }
 }

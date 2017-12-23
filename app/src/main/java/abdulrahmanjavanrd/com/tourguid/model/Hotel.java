@@ -33,7 +33,7 @@ public class Hotel implements BaseData<Hotel> {
     }
 
     /**
-     * This Method i call for pass adapter
+     * This Method when pass adapter
      * @return ArrayList contain object of {@link Hotel}
      */
     @Override

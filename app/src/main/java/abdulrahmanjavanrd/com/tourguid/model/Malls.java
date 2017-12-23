@@ -9,14 +9,17 @@ import abdulrahmanjavanrd.com.tourguid.Interface.BaseData;
 import abdulrahmanjavanrd.com.tourguid.R;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ * @author Abdulrahman.A
  */
 
 public class Malls implements BaseData<Malls> {
 
-    private int image ;
+    private int image;
     private Uri uriData;
 
+    /**
+     * @param uriData to set uri from {@link #fillUriData()}
+     */
     public void setUriData(Uri uriData) {
         this.uriData = uriData;
     }
@@ -27,40 +30,46 @@ public class Malls implements BaseData<Malls> {
     public void setImage(int image) {
         this.image = image;
     }
+
     @Override
     public int getImage() {
         return image;
     }
 
+    /**
+     * This Method when pass adapter
+     * @return ArrayList contain object of {@link Malls}
+     */
     @Override
     public List<Malls> getAllData() {
         List<Malls> mList = new ArrayList<>();
         int[] images = allImages();
         List<Uri> list = fillUriData();
-        try
-        {
-           for (int i = 0 ;i < images.length ;i++){
-              Malls mall = new Malls();
-              mall.setImage(images[i]);
-              mall.setUriData(list.get(i));
-              mList.add(mall);
-           }
-        }catch (ArrayIndexOutOfBoundsException e){
+        try {
+            for (int i = 0; i < images.length; i++) {
+                Malls mall = new Malls();
+                mall.setImage(images[i]);
+                mall.setUriData(list.get(i));
+                mList.add(mall);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
             e.getStackTrace();
         }
         return mList;
     }
+
     /**
      * Total Image = 10
+     *
      * @return All Mall images in drawable folder  .
      */
-    private int[] allImages(){
+    private int[] allImages() {
         int[] images = {
-                R.drawable.al_arabia_mall,R.drawable.al_yasmin_mall_png,R.drawable.alandalus_mall_png,
-                R.drawable.aziaz_mall_png,R.drawable.boulevard_mall_png,R.drawable.jeddah_shopping_center_png,
-                R.drawable.red_sea_mall_png,R.drawable.rushan_mall_png,R.drawable.salaam_mall,R.drawable.stars_avenue
+                R.drawable.al_arabia_mall, R.drawable.al_yasmin_mall_png, R.drawable.alandalus_mall_png,
+                R.drawable.aziaz_mall_png, R.drawable.boulevard_mall_png, R.drawable.jeddah_shopping_center_png,
+                R.drawable.red_sea_mall_png, R.drawable.rushan_mall_png, R.drawable.salaam_mall, R.drawable.stars_avenue
         };
-        return images ;
+        return images;
     }
 
 
@@ -68,8 +77,12 @@ public class Malls implements BaseData<Malls> {
     public Uri getUriData() {
         return this.uriData;
     }
-    private List<Uri> fillUriData(){
-        List<Uri> list = new ArrayList<>() ;
+
+    /**
+     * @return save all uri and return it .
+     */
+    private List<Uri> fillUriData() {
+        List<Uri> list = new ArrayList<>();
         list.add(Uri.parse("geo:21.633041, 39.155882?q=al arabia mall")); // Al Arabia Mall
         list.add(Uri.parse("geo:21.593268, 39.228283?q=al yasmin mall")); // Al yasmin Mall
         list.add(Uri.parse("geo:21.507054, 39.217643?q=al andalus mall")); // Al Andalus Mall
@@ -80,8 +93,9 @@ public class Malls implements BaseData<Malls> {
         list.add(Uri.parse("geo:21.665811, 39.109709?q=Rushan Mall jeddah")); //Stars Avenue Mall
         list.add(Uri.parse("geo:21.508222, 39.223295?q=Salaam Mall")); // Salaam Mall
         list.add(Uri.parse("geo:21.572986, 39.127952?q=Stars Avenue Mall")); //Stars Avenue Mall
-        return list ;
+        return list;
     }
+
     @Override
     public int hashCode() {
         return 2;

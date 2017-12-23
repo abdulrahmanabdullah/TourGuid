@@ -15,7 +15,7 @@ import abdulrahmanjavanrd.com.tourguid.adapter.MyAdapter;
 import abdulrahmanjavanrd.com.tourguid.factory.DataFactory;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ * @author abdulrahman.a
  */
 
 public class FoodFrag extends Fragment {
@@ -28,7 +28,8 @@ public class FoodFrag extends Fragment {
         return v;
     }
     public void addListView(Context context , View v){
-        /** First get Beach class from {@link DataFactory} And get getAllData method
+        /** Get Foods class Who? Create obj of {@link DataFactory} Then pass the class name into getDataType method
+         * This method return new object of {@link BaseData},just that .
          *  then send  arrayList to  {@link MyAdapter} */
         DataFactory factory = new DataFactory();
         BaseData foodData = factory.getDataType("foods");

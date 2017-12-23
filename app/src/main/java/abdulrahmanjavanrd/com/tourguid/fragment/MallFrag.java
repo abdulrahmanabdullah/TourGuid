@@ -15,7 +15,7 @@ import abdulrahmanjavanrd.com.tourguid.adapter.MyAdapter;
 import abdulrahmanjavanrd.com.tourguid.factory.DataFactory;
 
 /**
- * @author  Abdulrahman.A
+ * @author Abdulrahman.A
  * @sinc 21/12/2017.
  */
 
@@ -23,17 +23,19 @@ public class MallFrag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.mall_layout,container,false);
-        addListView(container.getContext(),v);
+        View v = inflater.inflate(R.layout.mall_layout, container, false);
+        addListView(container.getContext(), v);
         return v;
     }
-    public void addListView(Context context , View v){
-        /** First get Hotel class from {@link DataFactory} And get
+
+    public void addListView(Context context, View v) {
+        /** Get Malls class Who? Create new obj of {@link DataFactory} Then pass the class name into getDataType method
+         * This method return new object of {@link BaseData},just that .
          *  then send  arrayList to  {@link MyAdapter} */
         DataFactory factory = new DataFactory();
-        BaseData mallData = factory.getDataType("mall");
+        BaseData mallData = factory.getDataType("mall");// Here it well be create new object of Malls Class.
         ListView listView = v.findViewById(R.id.list_item);
-        MyAdapter adapter = new MyAdapter(context,mallData.getAllData(),mallData);
+        MyAdapter adapter = new MyAdapter(context, mallData.getAllData(), mallData);
         listView.setAdapter(adapter);
     }
 }

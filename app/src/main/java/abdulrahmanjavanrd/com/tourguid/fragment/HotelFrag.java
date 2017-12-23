@@ -19,7 +19,7 @@ import abdulrahmanjavanrd.com.tourguid.adapter.MyAdapter;
 import abdulrahmanjavanrd.com.tourguid.factory.DataFactory;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ *@author abdurlahman.a
  */
 
 public class HotelFrag extends Fragment  {
@@ -32,10 +32,11 @@ public class HotelFrag extends Fragment  {
     }
 
     public void addListView(final Context context , View v){
-        /** First get Hotel class from {@link DataFactory} And get ArrayList of {@link BaseData} objects
+        /** Get Hotel class Who? Create obj of {@link DataFactory} Then pass the class name into getDataType method
+         * This method return new object of {@link BaseData},just that .
          *  then send  arrayList to  {@link MyAdapter} */
         DataFactory factory = new DataFactory();
-        BaseData  hotelData = factory.getDataType("hotel");
+        BaseData  hotelData = factory.getDataType("hotel");//Here Create new object of Hotel Class .
         ListView listView = v.findViewById(R.id.list_item);
         MyAdapter adapter = new MyAdapter(context,hotelData.getAllData(),hotelData);
         listView.setAdapter(adapter);

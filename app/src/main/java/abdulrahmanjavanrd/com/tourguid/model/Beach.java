@@ -23,10 +23,12 @@ public class Beach implements BaseData<Beach> {
     }
 
 
+    /**
+     * @param uriData to set uri from {@link #fillUriData()}
+     */
     public void setUriData(Uri uriData) {
         this.uriData = uriData;
     }
-
 
     private List<Uri> fillUriData(){
         List<Uri> list = new ArrayList<>() ;
@@ -38,8 +40,8 @@ public class Beach implements BaseData<Beach> {
         return list ;
     }
     /**
-     * This Method i call for pass adapter
-     * @return ArrayList contain object of {@link Hotel}
+     * This Method when pass adapter
+     * @return ArrayList contain object of {@link Beach}
      */
     @Override
     public List<Beach> getAllData() {
@@ -65,7 +67,7 @@ public class Beach implements BaseData<Beach> {
     }
 
     /**
-     * @return All restaurant images in drawable folder  .
+     * @return All beach images in drawable folder  .
      */
     private int[] allImages(){
         int[] images = {
