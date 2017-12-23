@@ -9,7 +9,8 @@ import abdulrahmanjavanrd.com.tourguid.Interface.BaseData;
 import abdulrahmanjavanrd.com.tourguid.R;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ * @author Abdulrahman.A
+ * @since on 21/12/2017.
  */
 
 public class Hotel implements BaseData<Hotel> {
@@ -51,6 +52,9 @@ public class Hotel implements BaseData<Hotel> {
     }
 
 
+    /**
+     * @return location for all hotel
+     */
     private List<Uri> fillUriData(){
         List<Uri> uri = new ArrayList<>();
         uri.add(Uri.parse("geo:21.576524, 39.110135?q=jeddah rosewood hotel"));//Jeddah RoseWood hotel

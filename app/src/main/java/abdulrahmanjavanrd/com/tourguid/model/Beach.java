@@ -9,7 +9,7 @@ import abdulrahmanjavanrd.com.tourguid.Interface.BaseData;
 import abdulrahmanjavanrd.com.tourguid.R;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ * @author Abdulrahman.A
  */
 
 public class Beach implements BaseData<Beach> {
@@ -28,14 +28,13 @@ public class Beach implements BaseData<Beach> {
     }
 
 
-    private List<String> fillUriData(){
-        List<String> list = new ArrayList<>() ;
-        list.add("www.beach-1.com");
-        list.add("www.beach-2.com");
-        list.add("www.beach-3.com");
-        list.add("www.beach-4.com");
-        list.add("www.beach-5.com");
-        list.add("www.beach-6.com");
+    private List<Uri> fillUriData(){
+        List<Uri> list = new ArrayList<>() ;
+        list.add(Uri.parse("geo:21.177882, 39.171984?q=Al Saif Beach "));// AL Saif Beach .
+        list.add(Uri.parse("geo:21.515828, 39.144850?q=Fountain"));// King Fahd Fountain .
+        list.add(Uri.parse("geo:21.604883, 39.106749?q=Jeddah WaterFront"));//jw beach .
+        list.add(Uri.parse("geo:21.515828, 39.144850?q=Fountain"));// King Fahd Fountain beach.
+        list.add(Uri.parse("geo:22.272987, 39.086922?q=Thuawal Public Beach"));// Thuawal Beach.
         return list ;
     }
     /**
@@ -46,12 +45,12 @@ public class Beach implements BaseData<Beach> {
     public List<Beach> getAllData() {
         List<Beach> mList = new ArrayList<>();
         int[] images = allImages();
-        List<String> list = fillUriData();
+        List<Uri> list = fillUriData();
         try{
             for ( int i = 0 ; i < images.length ; i++){
                 Beach beach = new Beach();
                 beach.setImage(images[i]);
-//                beach.setUriData(list.get(i));
+                beach.setUriData(list.get(i));
                 mList.add(beach);
             }
         }catch (ArrayIndexOutOfBoundsException e ){

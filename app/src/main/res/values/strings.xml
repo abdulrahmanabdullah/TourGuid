@@ -49,10 +49,10 @@
         <item>IHope </item>
         <item>Payaya Cafe And Restaurant</item>
         <item>Blue Ocean</item>
-        <item>Shack Shack</item>
+        <item>Shake Shack</item>
         <item>Texas RoadHouse</item>
         <item>Al Baik</item>
-        <item>Al Tasij</item>
+        <item>Al Tazaj</item>
         <item>Abu Zaid</item>
     </string-array>
     <string-array name="foodDescription">
@@ -64,15 +64,15 @@
         <item>Cafe And Restaurant</item>
         <!--Blue ocean-->
         <item>Cafe And Restaurant</item>
-        <!--Shack shack-->
+        <!--Shake shack-->
         <item>Hamburger Restaurant</item>
         <!--Texas -->
-        <item>FastFood</item>
+        <item>Fast Food</item>
         <!--AL Baik-->
-        <item>FastFood</item>
-        <item>FastFood</item>
+        <item>Fast Food</item>
+        <item>Grilled Food</item>
         <!--Abu Zaid -->
-        <item> Popular foods </item>
+        <item> Popular Foods </item>
     </string-array>
     <string-array name="beachTitle">
         <item>Al Saif Beach</item>

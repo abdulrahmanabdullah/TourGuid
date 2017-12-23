@@ -9,15 +9,17 @@ import abdulrahmanjavanrd.com.tourguid.Interface.BaseData;
 import abdulrahmanjavanrd.com.tourguid.R;
 
 /**
- * Created by nfs05 on 21/12/2017.
+ *@author abdulrahman abdullah
  */
 
 public class Foods implements BaseData<Foods> {
     private int image ;
     private Uri urlData ;
 
-
-    /** Create new array string length = {@link #allImages()}.length*/
+    /**
+     *
+     * @param urlData set location for each items in
+     */
     public void setUrlData(Uri urlData) {
         this.urlData = urlData;
     }
@@ -42,12 +44,12 @@ public class Foods implements BaseData<Foods> {
     public List<Foods> getAllData() {
         List<Foods> mList = new ArrayList<>();
         int[] images = allImages();
-        List<String> list = fillUriData();
+        List<Uri> list = fillUriData();
         try{
            for (int i = 0 ; i < images.length ; i++){
                Foods food = new Foods();
                food.setImage(images[i]);
-//               food.setUrlData(list.get(i));
+               food.setUrlData(list.get(i));
                mList.add(food);
            }
         }catch (ArrayIndexOutOfBoundsException e){
@@ -68,23 +70,22 @@ public class Foods implements BaseData<Foods> {
     private int[] allImages() {
 
         int[] images = {
-                R.drawable.ihop_png,R.drawable.cheesecake_factory,R.drawable.payaya_cafe_restaurant_png,R.drawable.blue_ocean_png,R.drawable.shacke_shack_png,R.drawable.texas_roadhouse_png,R.drawable.al_baik_png,R.drawable.al_taisj_png,
+                R.drawable.cheesecake_factory,R.drawable.ihop_png,R.drawable.payaya_cafe_restaurant_png,R.drawable.blue_ocean_png,R.drawable.shacke_shack_png,R.drawable.texas_roadhouse_png,R.drawable.al_baik_png,R.drawable.al_taisj_png,
                 R.drawable.abu_zaid_png
         };
         return images;
     }
-    private List<String> fillUriData(){
-        List<String> list = new ArrayList<>() ;
-        list.add("www.food-1.com");
-        list.add("www.food-2.com");
-        list.add("www.hhhh-3.com");
-        list.add("www.hhhh-4.com");
-        list.add("www.hhhh-5.com");
-        list.add("www.hhhh-6.com");
-        list.add("www.hhhhl-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-10.com");
+    private List<Uri> fillUriData(){
+        List<Uri> list = new ArrayList<>() ;
+        list.add(Uri.parse("geo:21.553674, 39.166799?q=cheesecake factory jeddah"));
+        list.add(Uri.parse("geo:21.553714, 39.167732?q=ihope"));
+        list.add(Uri.parse("geo:21.582923, 39.130666?q=payaya cafe"));
+        list.add(Uri.parse("geo:21.572239, 39.109176?q=Blue ocean "));
+        list.add(Uri.parse("geo:21.553817, 39.167718?q=Shake Shack"));
+        list.add(Uri.parse("geo:21.553706, 39.167652?q=Texas RoadHouse"));
+        list.add(Uri.parse("geo:21.553688, 39.162395?q=Al Baik"));
+        list.add(Uri.parse("geo:21.550974, 39.155494?q=Al Tazaj"));
+        list.add(Uri.parse("geo:21.569069, 39.183211?q=Abu Zaid Restaurant"));
         return list ;
     }
     @Override

@@ -36,13 +36,13 @@ public class Malls implements BaseData<Malls> {
     public List<Malls> getAllData() {
         List<Malls> mList = new ArrayList<>();
         int[] images = allImages();
-        List<String> list = fillUriData();
+        List<Uri> list = fillUriData();
         try
         {
            for (int i = 0 ;i < images.length ;i++){
               Malls mall = new Malls();
               mall.setImage(images[i]);
-//              mall.setUriData(list.get(i));
+              mall.setUriData(list.get(i));
               mList.add(mall);
            }
         }catch (ArrayIndexOutOfBoundsException e){
@@ -68,18 +68,18 @@ public class Malls implements BaseData<Malls> {
     public Uri getUriData() {
         return this.uriData;
     }
-    private List<String> fillUriData(){
-        List<String> list = new ArrayList<>() ;
-        list.add("www.mall-1.com");
-        list.add("www.mall-2.com");
-        list.add("www.mall-3.com");
-        list.add("www.mall-4.com");
-        list.add("www.mall-5.com");
-        list.add("www.mall-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-10.com");
+    private List<Uri> fillUriData(){
+        List<Uri> list = new ArrayList<>() ;
+        list.add(Uri.parse("geo:21.633041, 39.155882?q=al arabia mall")); // Al Arabia Mall
+        list.add(Uri.parse("geo:21.593268, 39.228283?q=al yasmin mall")); // Al yasmin Mall
+        list.add(Uri.parse("geo:21.507054, 39.217643?q=al andalus mall")); // Al Andalus Mall
+        list.add(Uri.parse("geo:21.577169, 39.197273?q=Aziz mall")); // Aziaz Mall
+        list.add(Uri.parse("geo:21.569767, 39.125088?q=Boulevard mall")); // Boulevard Mall
+        list.add(Uri.parse("geo:21.550139, 39.148049?q=Tahlia Center")); // Tahlia Shopping
+        list.add(Uri.parse("geo:21.627865, 39.110690?q=Red Sea Mall")); // Red Sea Mall
+        list.add(Uri.parse("geo:21.665811, 39.109709?q=Rushan Mall jeddah")); //Stars Avenue Mall
+        list.add(Uri.parse("geo:21.508222, 39.223295?q=Salaam Mall")); // Salaam Mall
+        list.add(Uri.parse("geo:21.572986, 39.127952?q=Stars Avenue Mall")); //Stars Avenue Mall
         return list ;
     }
     @Override
