@@ -1,5 +1,7 @@
 package abdulrahmanjavanrd.com.tourguid.model;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +14,11 @@ import abdulrahmanjavanrd.com.tourguid.R;
 
 public class Foods implements BaseData<Foods> {
     private int image ;
-    private String urlData ;
+    private Uri urlData ;
 
 
     /** Create new array string length = {@link #allImages()}.length*/
-    public void setUrlData(String urlData) {
+    public void setUrlData(Uri urlData) {
         this.urlData = urlData;
     }
 
@@ -45,7 +47,7 @@ public class Foods implements BaseData<Foods> {
            for (int i = 0 ; i < images.length ; i++){
                Foods food = new Foods();
                food.setImage(images[i]);
-               food.setUrlData(list.get(i));
+//               food.setUrlData(list.get(i));
                mList.add(food);
            }
         }catch (ArrayIndexOutOfBoundsException e){
@@ -56,7 +58,7 @@ public class Foods implements BaseData<Foods> {
 
 
     @Override
-    public String getUrlData() {
+    public Uri getUriData() {
         return this.urlData;
     }
     /**

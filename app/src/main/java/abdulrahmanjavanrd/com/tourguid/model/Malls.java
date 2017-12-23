@@ -1,5 +1,7 @@
 package abdulrahmanjavanrd.com.tourguid.model;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,10 +15,10 @@ import abdulrahmanjavanrd.com.tourguid.R;
 public class Malls implements BaseData<Malls> {
 
     private int image ;
-    private String urlData;
+    private Uri uriData;
 
-    public void setUrlData(String urlData) {
-        this.urlData = urlData;
+    public void setUriData(Uri uriData) {
+        this.uriData = uriData;
     }
 
     /**
@@ -40,7 +42,7 @@ public class Malls implements BaseData<Malls> {
            for (int i = 0 ;i < images.length ;i++){
               Malls mall = new Malls();
               mall.setImage(images[i]);
-              mall.setUrlData(list.get(i));
+//              mall.setUriData(list.get(i));
               mList.add(mall);
            }
         }catch (ArrayIndexOutOfBoundsException e){
@@ -63,8 +65,8 @@ public class Malls implements BaseData<Malls> {
 
 
     @Override
-    public String getUrlData() {
-        return this.urlData;
+    public Uri getUriData() {
+        return this.uriData;
     }
     private List<String> fillUriData(){
         List<String> list = new ArrayList<>() ;

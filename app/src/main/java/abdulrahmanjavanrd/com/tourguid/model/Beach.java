@@ -1,5 +1,7 @@
 package abdulrahmanjavanrd.com.tourguid.model;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,7 @@ import abdulrahmanjavanrd.com.tourguid.R;
 
 public class Beach implements BaseData<Beach> {
     private int image ;
-    private String uriData ;
+    private Uri uriData ;
     /**
      * @param image to set image in current object .
      */
@@ -21,7 +23,7 @@ public class Beach implements BaseData<Beach> {
     }
 
 
-    public void setUriData(String uriData) {
+    public void setUriData(Uri uriData) {
         this.uriData = uriData;
     }
 
@@ -49,7 +51,7 @@ public class Beach implements BaseData<Beach> {
             for ( int i = 0 ; i < images.length ; i++){
                 Beach beach = new Beach();
                 beach.setImage(images[i]);
-                beach.setUriData(list.get(i));
+//                beach.setUriData(list.get(i));
                 mList.add(beach);
             }
         }catch (ArrayIndexOutOfBoundsException e ){
@@ -59,7 +61,7 @@ public class Beach implements BaseData<Beach> {
     }
 
     @Override
-    public String getUrlData() {
+    public Uri getUriData() {
         return this.uriData;
     }
 

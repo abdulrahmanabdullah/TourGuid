@@ -1,5 +1,7 @@
 package abdulrahmanjavanrd.com.tourguid.model;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import abdulrahmanjavanrd.com.tourguid.R;
 public class Hotel implements BaseData<Hotel> {
 
     private int image ;
-    private String uriData ;
+    private Uri uriData ;
 
     /**
      * @param image to set image in current object .
@@ -22,7 +24,7 @@ public class Hotel implements BaseData<Hotel> {
         this.image = image;
     }
 
-    public void setUriData(String uriData) {
+    public void setUriData(Uri uriData) {
         this.uriData = uriData;
     }
 
@@ -34,7 +36,7 @@ public class Hotel implements BaseData<Hotel> {
     public List<Hotel> getAllData() {
         List<Hotel> mList = new ArrayList<>();
         int[] images = allImages();
-        List<String> list = fillUriData();
+        List<Uri> list = fillUriData();
         try{
            for ( int i = 0 ; i < images.length ; i++){
                Hotel hotel = new Hotel();
@@ -49,22 +51,21 @@ public class Hotel implements BaseData<Hotel> {
     }
 
 
-    private List<String> fillUriData(){
-        List<String> list = new ArrayList<>() ;
-        list.add("www.hotel-1.com");
-        list.add("www.hotel-2.com");
-        list.add("www.hotel-3.com");
-        list.add("www.hotel-4.com");
-        list.add("www.hotel-5.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-6.com");
-        list.add("www.hotel-10.com");
-        return list ;
+    private List<Uri> fillUriData(){
+        List<Uri> uri = new ArrayList<>();
+        uri.add(Uri.parse("geo:21.576524, 39.110135?q=jeddah rosewood hotel"));//Jeddah RoseWood hotel
+        uri.add(Uri.parse("geo:21.604747,39.109195?q=jeddah hilton hotel"));//Jeddah Hilton
+        uri.add(Uri.parse("geo:21.601903, 39.107995?q=jeddah sofitel hotel"));//Jeddah Sofitel
+        uri.add(Uri.parse("geo:21.594588, 39.149301?q=Redisson Blue hotel"));//Redisson Blue hotel
+        uri.add(Uri.parse("geo:21.524921, 39.151676?q=jeddah ritz carlton hotel"));//Ritz Carlton
+        uri.add(Uri.parse("geo:21.603796, 39.109033?q=jeddah waldrof Astoria hotel"));//Waldrof Astoria
+        uri.add(Uri.parse("geo:21.568257, 39.149824?q=jeddah Al Rawasi  hotel"));//Al Rawasi Hotel
+        uri.add(Uri.parse("geo:21.514208, 39.154141?q=jeddah park Hyatt"));//Park Hyatt hotel
+        uri.add(Uri.parse("geo:21.614357, 39.108368?q=jeddah Sheraton hotel"));//Sheraton hotel
+        return uri ;
     }
     @Override
-    public String getUrlData() {
+    public Uri getUriData() {
         return this.uriData;
     }
 

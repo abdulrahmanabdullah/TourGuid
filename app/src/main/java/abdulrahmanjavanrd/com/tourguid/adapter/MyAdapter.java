@@ -3,7 +3,6 @@ package abdulrahmanjavanrd.com.tourguid.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -103,12 +101,7 @@ public class MyAdapter extends BaseAdapter {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:21.604747,39.109195");
-//                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-//                mapIntent.setPackage("com.google.android.apps.maps");
-//                context.startActivity(mapIntent);
-                showLocation(gmmIntentUri);
-//                Toast.makeText(context,getItem(position).getUrlData(),Toast.LENGTH_SHORT).show();
+                showLocation(getItem(position).getUriData());
             }
         });
 
@@ -118,6 +111,7 @@ public class MyAdapter extends BaseAdapter {
     private void showLocation(Uri location){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(location);
+        intent.setPackage("com.google.android.apps.maps");
         context.startActivity(intent);
     }
 
