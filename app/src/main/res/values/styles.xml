@@ -11,7 +11,13 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+<!--Splash screen Theme-->
+    <style name="splashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:background">@drawable/al_saif_beach_png</item>
+    </style>
 
+    <!--ToolBar Theme-->
     <style name="toolBarTheme" parent="ThemeOverlay.AppCompat">
         <item name="android:textColorPrimary">#fff</item>
         <item name="android:textColorSecondary">@color/secondaryText</item>
