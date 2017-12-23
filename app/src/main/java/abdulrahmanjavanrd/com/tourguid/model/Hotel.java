@@ -15,16 +15,19 @@ import abdulrahmanjavanrd.com.tourguid.R;
 
 public class Hotel implements BaseData<Hotel> {
 
-    private int image ;
-    private Uri uriData ;
+    private int image;
+    private Uri uriData;
 
     /**
-     * @param image to set image in current object .
+     * @param image to set image from {@link #allImages()}
      */
     public void setImage(int image) {
         this.image = image;
     }
 
+    /**
+     * @param uriData to set uri from {@link #fillUriData()}
+     */
     public void setUriData(Uri uriData) {
         this.uriData = uriData;
     }
@@ -38,14 +41,14 @@ public class Hotel implements BaseData<Hotel> {
         List<Hotel> mList = new ArrayList<>();
         int[] images = allImages();
         List<Uri> list = fillUriData();
-        try{
-           for ( int i = 0 ; i < images.length ; i++){
-               Hotel hotel = new Hotel();
-               hotel.setImage(images[i]);
-               hotel.setUriData(list.get(i));
-               mList.add(hotel);
-           }
-        }catch (ArrayIndexOutOfBoundsException e ){
+        try {
+            for (int i = 0; i < images.length; i++) {
+                Hotel hotel = new Hotel();
+                hotel.setImage(images[i]);
+                hotel.setUriData(list.get(i));
+                mList.add(hotel);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
             e.getStackTrace();
         }
         return mList;
@@ -53,9 +56,9 @@ public class Hotel implements BaseData<Hotel> {
 
 
     /**
-     * @return location for all hotel
+     * @return location for all {@link Hotel} objects .
      */
-    private List<Uri> fillUriData(){
+    private List<Uri> fillUriData() {
         List<Uri> uri = new ArrayList<>();
         uri.add(Uri.parse("geo:21.576524, 39.110135?q=jeddah rosewood hotel"));//Jeddah RoseWood hotel
         uri.add(Uri.parse("geo:21.604747,39.109195?q=jeddah hilton hotel"));//Jeddah Hilton
@@ -66,8 +69,9 @@ public class Hotel implements BaseData<Hotel> {
         uri.add(Uri.parse("geo:21.568257, 39.149824?q=jeddah Al Rawasi  hotel"));//Al Rawasi Hotel
         uri.add(Uri.parse("geo:21.514208, 39.154141?q=jeddah park Hyatt"));//Park Hyatt hotel
         uri.add(Uri.parse("geo:21.614357, 39.108368?q=jeddah Sheraton hotel"));//Sheraton hotel
-        return uri ;
+        return uri;
     }
+
     @Override
     public Uri getUriData() {
         return this.uriData;
@@ -79,17 +83,18 @@ public class Hotel implements BaseData<Hotel> {
      */
     private int[] allImages() {
         int[] images = {
-                R.drawable.rosewood_png,R.drawable.hilton_png,
+                R.drawable.rosewood_png, R.drawable.hilton_png,
                 R.drawable.softie_png,
                 R.drawable.redisson_blue_png,
                 R.drawable.ritz_carlton_png,
                 R.drawable.waldrof_png,
                 R.drawable.al_roicea_png,
-                R.drawable.jeddah_park_png ,
+                R.drawable.jeddah_park_png,
                 R.drawable.intercontiental
         };
         return images;
     }
+
     @Override
     public int getImage() {
         return image;

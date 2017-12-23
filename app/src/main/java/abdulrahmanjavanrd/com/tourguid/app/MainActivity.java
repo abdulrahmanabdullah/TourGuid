@@ -1,5 +1,6 @@
 package abdulrahmanjavanrd.com.tourguid.app;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.TableLayout;
 
 import abdulrahmanjavanrd.com.tourguid.R;
 import abdulrahmanjavanrd.com.tourguid.pager.Pager;
+import abdulrahmanjavanrd.com.tourguid.splash.SplashActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +31,5 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(pager);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
-
     }
 }

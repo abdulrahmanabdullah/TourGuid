@@ -1,41 +1,45 @@
 package abdulrahmanjavanrd.com.tourguid.splash;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import abdulrahmanjavanrd.com.tourguid.R;
 import abdulrahmanjavanrd.com.tourguid.app.MainActivity;
 
-/**
- * Created by abdulrahman on 12/23/17.
- */
-
 public class SplashActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        /** to get Full screen when app start  */
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_splash);
         LogoThread thread = new LogoThread();
         thread.start();
-        Intent mIntent = new Intent(this, MainActivity.class);
-        startActivity(mIntent);
-        finish();
     }
 
-
-    private class LogoThread extends Thread{
+    /**
+     * This inner class have two process
+     * 1 - stay {@link SplashActivity} 4 seconds Then
+     * 2 - go to MainActivity
+     */
+    private class LogoThread extends Thread {
 
         @Override
         public void run() {
-            try{
-               Thread.sleep(3000);
-            }catch (Exception e ){
-                Log.e("thread ",e.getMessage());
+            try {
+                Thread.sleep(4000);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+            /** Go to {@link MainActivity} */
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(intent);
+            SplashActivity.this.finish();
         }
     }
 }

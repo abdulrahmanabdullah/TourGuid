@@ -6,6 +6,10 @@
     <string name="foods_tab">Foods</string>
     <string name="card_title">Title</string>
     <string name="card_description">Description</string>
+    <string name="welcome_msg">Welcome to Jeddah City
+                    This simple Tour Giud
+                    We hope enjoyed.
+    </string>
     <string-array name="mallTitle">
         <item>Al-Arabia Mall</item>
         <item>Al Yasmin Mall</item>
@@ -124,7 +128,7 @@
         <!-- RoseWood -->
         <item>
             View : panoramic Red Sea Views
-           Booking Rate : 8.6
+            Booking Rate : 8.6
         </item>
         <!-- Hilton -->
         <item>
