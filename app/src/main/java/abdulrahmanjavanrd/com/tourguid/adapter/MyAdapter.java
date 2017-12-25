@@ -77,21 +77,29 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        View v = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
-        ImageView imgView = v.findViewById(R.id.imgView);
-        TextView txvTitle = v.findViewById(R.id.txvTitle);
-        TextView txvDesc = v.findViewById(R.id.txvDesc);
-        Button btnShowLocation = v.findViewById(R.id.btn_location);
-        imgView.setImageResource(getItem(position).getImage());
-        txvTitle.setText(titlesCard[position]);
-        txvDesc.setText(descriptionCard[position]);
-        btnShowLocation.setOnClickListener(new View.OnClickListener() {
+        MyViewHolder holder ;
+        if (convertView == null ){
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item,null);
+            holder = new MyViewHolder();
+            holder.imgView = convertView.findViewById(R.id.imgView);
+            holder.txvTitel = convertView.findViewById(R.id.txvTitle);
+            holder.txvDesc = convertView.findViewById(R.id.txvDesc);
+            holder.btnLocation = convertView.findViewById(R.id.btn_location);
+            convertView.setTag(holder);
+        }
+        else {
+            holder = (MyViewHolder) convertView.getTag();
+        }
+        holder.imgView.setImageResource(getItem(position).getImage());
+        holder.txvTitel.setText(titlesCard[position]);
+        holder.txvDesc.setText(descriptionCard[position]);
+        holder.btnLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showLocation(getItem(position).getUriData());
+               showLocation(getItem(position).getUriData());
             }
         });
-        return v;
+        return convertView;
     }
 
     /**
@@ -102,5 +110,13 @@ public class MyAdapter extends BaseAdapter {
         intent.setData(location);
         intent.setPackage("com.google.android.apps.maps");
         context.startActivity(intent);
+    }
+
+    static class MyViewHolder {
+       ImageView imgView ;
+       TextView txvTitel ;
+       TextView txvDesc ;
+       Button btnLocation ;
+
     }
 }
